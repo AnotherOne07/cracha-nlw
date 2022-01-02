@@ -1,0 +1,85 @@
+*
+{
+    margin: 0;
+}
+html,body
+{
+    --gray: rgba(225, 225, 230, 1);
+    --black: rgba(32, 32, 36, 1);
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body
+{
+    display: grid; 
+    /* ferramenta para organizar layout, permite tambem a centralização de itens */
+    place-items: center; 
+       
+}
+main
+{
+    background: url(images/Background.svg);
+    width: 375px;
+    height: 812px;
+}
+.content
+{
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center; 
+    color: var(--gray);   
+}
+.avatar
+{
+   width: 10rem;
+   margin: 11.5rem auto 0;
+   /* margin-top margin-left margin-right margin-bot */
+   position: relative;
+}
+.avatar span
+{
+    position: absolute;
+    top: -15px;
+    z-index: 1; 
+    /* atributo utilizado para definir a profundidade, ou seja quem se sobrepões*/   
+}
+.avatar > img
+{
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 99%, 0 75%, 0 25%);
+}
+h1
+{
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+a
+{
+    
+    text-decoration: none;
+    margin-top: 0.25rem;
+    color: var(--gray);
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+p
+{
+    margin-top: 2rem;
+}
+ul
+{
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem; /* espaçamento entre os termos da lista ul*/
+    justify-content: center; /* alternativa para centralização de conteúdo NÃO-TEXTO*/
+}
+/* Os atributos que vierem por último serão os mais fortes, efeito CASCATA*/
